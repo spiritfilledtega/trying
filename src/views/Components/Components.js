@@ -12,6 +12,7 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Typing from "react-typing-animation";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
@@ -31,48 +32,68 @@ import SectionPills from "./Sections/SectionPills.js";
 // import SectionDownload from "./Sections/SectionDownload.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
+import { createTheme } from "@material-ui/core/styles";
+import { responsiveFontSizes, ThemeProvider } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(styles);
+let theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 550,
+      md: 990,
+      lg: 1280,
+      xl: 1920,
+    },
+  },
+});
+
+theme = responsiveFontSizes(theme);
 
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  return (
-    <div>
-      <Header
-        brand="Tensel 1.0"
-        rightLinks={<HeaderLinks />}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white",
-        }}
-        {...rest}
-      />
-      <Parallax image={require("assets/img/tenselbg.jpg").default}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem>
-              <div className={classes.brand}>
-                <Typing>
-                  <h1 className={classes.title}>Use Tensel</h1>{" "}
-                </Typing>
-                <h3 className={classes.subtitle}>a safe Peer Network</h3>
-              </div>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </Parallax>
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
+  // const matchesb = useMediaQuery(theme.breakpoints.up("sm"));
 
-      {
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          {/* <SectionBasics /> */}
-          {/* <SectionNavbars /> */}
-          {/* <SectionTabs /> */}
-          <SectionPills />
-          {/* <SectionNotifications /> */}
-          {/* <SectionTypography />
+  if (matches) {
+    return (
+      <ThemeProvider theme={theme}>
+        <div>
+          <Header
+            brand="Tensel 1.0"
+            rightLinks={<HeaderLinks />}
+            fixed
+            color="transparent"
+            changeColorOnScroll={{
+              height: 400,
+              color: "white",
+            }}
+            {...rest}
+          />
+          <Parallax image={require("assets/img/tenselbg.jpg").default}>
+            <div className={classes.container}>
+              <GridContainer>
+                <GridItem>
+                  <div className={classes.brand}>
+                    <Typing>
+                      <h1 className={classes.title}>Use Tensel</h1>{" "}
+                    </Typing>
+                    <h3 className={classes.subtitle}>a safe Peer Network</h3>
+                  </div>
+                </GridItem>
+              </GridContainer>
+            </div>
+          </Parallax>
+
+          {
+            <div className={classNames(classes.main, classes.mainRaised)}>
+              {/* <SectionBasics /> */}
+              {/* <SectionNavbars /> */}
+              {/* <SectionTabs /> */}
+              <SectionPills />
+              {/* <SectionNotifications /> */}
+              {/* <SectionTypography />
           <SectionJavascript />
           <SectionCarousel />
           <SectionCompletedExamples />
@@ -86,9 +107,66 @@ export default function Components(props) {
           </GridItem>
           <SectionExamples />
           <SectionDownload /> */}
+            </div>
+          }
+          <Footer />
         </div>
-      }
-      <Footer />
-    </div>
-  );
+      </ThemeProvider>
+    );
+  } else {
+    return (
+      <ThemeProvider theme={theme}>
+        <div>
+          <Header
+            brand="Tensel 1.0"
+            rightLinks={<HeaderLinks />}
+            fixed
+            color="transparent"
+            changeColorOnScroll={{
+              height: 400,
+              color: "white",
+            }}
+            {...rest}
+          />
+          <Parallax image={require("assets/img/tenselbg.jpg").default}>
+            <div className={classes.container}>
+              <GridContainer>
+                <GridItem>
+                  <div className={classes.brand}>
+                    <h1 className={classes.title}>Use Tensel</h1>{" "}
+                    <h3 className={classes.subtitle}>a safe Peer Network</h3>
+                  </div>
+                </GridItem>
+              </GridContainer>
+            </div>
+          </Parallax>
+
+          {
+            <div className={classes.main}>
+              {/* <SectionBasics /> */}
+              {/* <SectionNavbars /> */}
+              {/* <SectionTabs /> */}
+              <SectionPills />
+              {/* <SectionNotifications /> */}
+              {/* <SectionTypography />
+          <SectionJavascript />
+          <SectionCarousel />
+          <SectionCompletedExamples />
+          <SectionLogin />
+          <GridItem md={12} className={classes.textCenter}>
+            <Link to={"/login-page"} className={classes.link}>
+              <Button color="primary" size="lg" simple>
+                View Login Page
+              </Button>
+            </Link>
+          </GridItem>
+          <SectionExamples />
+          <SectionDownload /> */}
+            </div>
+          }
+          <Footer />
+        </div>
+      </ThemeProvider>
+    );
+  }
 }
