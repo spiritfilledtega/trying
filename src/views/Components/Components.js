@@ -77,7 +77,7 @@ export default function Components(props) {
                 <GridItem>
                   <div className={classes.brand}>
                     <Typing>
-                      <h1 className={classes.title}>Use Tensel</h1>{" "}
+                      <h1 className={classes.title}>Use Kabura</h1>{" "}
                     </Typing>
                     <h3 className={classes.subtitle}>a safe Peer Network</h3>
                   </div>
