@@ -13,7 +13,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import AccessibilityNewIcon from "@material-ui/icons/AccessibilityNew";
 // import AccessibleIcon from "@material-ui/icons/Accessible";
 
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/footerStyle"
+
+// import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
 const useStyles = makeStyles(styles);
 

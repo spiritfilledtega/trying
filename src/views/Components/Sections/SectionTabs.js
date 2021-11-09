@@ -2,17 +2,18 @@ import React, { useContext } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Peer from "../Sections/Peer";
-import BtcBuyers from "Data/BTC/BuyersData";
-import UsdtBuyers from "Data/USDT/BuyersData";
-import EthBuyers from "Data/ETH/BuyersData";
-import BusdBuyers from "Data/BUSD/BuyersData";
-import BtcSellers from "Data/BTC/SellersData";
-import UsdtSellers from "Data/USDT/SellersData";
-import EthSellers from "Data/ETH/SellersData";
-import BusdSellers from "Data/BUSD/SellersData";
-import UsefullBuyers from "Data/USEFULL/BuyersData";
-import UsefullSellers from "Data/USEFULL/SellersData";
-import { ColoredContext } from "views/Components/Sections/SectionPills";
+import BtcBuyers from "../../../Data/BTC/BuyersData";
+import UsdtBuyers from "../../../Data/USDT/BuyersData";
+import EthBuyers from "../../../Data/ETH/BuyersData";
+import BusdBuyers from "../../../Data/BUSD/BuyersData";
+import BtcSellers from "../../../Data/BTC/SellersData";
+import UsdtSellers from "../../../Data/USDT/SellersData";
+import EthSellers from "../../../Data/ETH/SellersData";
+import BusdSellers from "../../../Data/BUSD/SellersData";
+import UsefullBuyers from "../../../Data/USEFULL/BuyersData";
+import UsefullSellers from "../../../Data/USEFULL/SellersData";
+import { ColoredContext } from "../../../../src/views/Components/Sections/SectionPills.js";
+// import { ColoredContext } from "views/Components/Sections/SectionPills";
 
 // import PeersHeader from "./PeersHeader";
 // import Sellers from "Data/BTC/SellersData";
@@ -30,9 +31,9 @@ import busdImage from "../../../assets/img/busd.png";
 // core components
 // import GridContainer from "components/Grid/GridContainer.js";
 // import GridItem from "components/Grid/GridItem.js";
-import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import CustomTabs from "../../../components/CustomTabs/CustomTabs.js";
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/tabsStyle.js";
+import styles from "../../../assets/jss/material-kit-react/views/componentsSections/tabsStyle.js";
 // import { customColor } from "assets/jss/material-kit-react";
 // import { lightGreen } from "@material-ui/core/colors";
 
@@ -74,7 +75,8 @@ export default function SectionTabs() {
             headerColor="custom"
             tabs={[
               {
-                tabName: "USDT",
+                tabName: "CAT FISH",
+                // tabName: "USDT",
                 tabImage: usdtImage,
                 tabContent: UsdtData.map((buyer, index) => (
                   <Peer
@@ -92,7 +94,8 @@ export default function SectionTabs() {
                 )),
               },
               {
-                tabName: "BUSD",
+                tabName: "LIVE STOCKS",
+                // tabName: "BUSD",
                 tabImage: busdImage,
                 tabContent: BusdData.map((buyer, index) => (
                   <Peer
@@ -110,7 +113,8 @@ export default function SectionTabs() {
                 )),
               },
               {
-                tabName: "BTC",
+                tabName: "POULTRY",
+                // tabName: "BTC",
                 tabImage: bitcoinImage,
                 tabContent: BtcData.map((buyer, index) => (
                   <Peer
@@ -128,7 +132,8 @@ export default function SectionTabs() {
                 )),
               },
               {
-                tabName: "ETH",
+                tabName: "VEGETABLE",
+                // tabName: "ETH",
                 tabImage: ethImage,
                 tabContent: EthData.map((buyer, index) => (
                   <Peer
@@ -145,8 +150,30 @@ export default function SectionTabs() {
                   />
                 )),
               },
+
               {
-                tabName: "USEFUL",
+                tabName: "FRUITS",
+                // tabName: "ETH",
+                tabImage: ethImage,
+                tabContent: EthData.map((buyer, index) => (
+                  <Peer
+                    key={index}
+                    img={buyer.img}
+                    rate={buyer.rate}
+                    name={buyer.name}
+                    available={buyer.available}
+                    kind={buyer.kind}
+                    verified={buyer.verified}
+                    whatsapp={true}
+                    zoom={true}
+                    contact={buyer.contact}
+                  />
+                )),
+              },
+
+              {
+                tabName: "TUBERS",
+                // tabName: "USEFUL",
                 tabImage: usefullImage,
                 tabContent: UsefullData.map((buyer, index) => (
                   <Peer

@@ -11,11 +11,14 @@ import Tab from "@material-ui/core/Tab";
 // import Icon from "@material-ui/core/Icon";
 import { Avatar } from "@material-ui/core";
 // core components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
+import Card from "../Card/Card.js";
+// import Card from "components/Card/Card.js";
+import CardBody from "../Card/CardBody.js";
+// import CardBody from "components/Card/CardBody.js";
+import CardHeader from "../Card/CardHeader.js";
+// import CardHeader from "components/Card/CardHeader.js";
 
-import styles from "assets/jss/material-kit-react/components/customTabsStyle.js";
+import styles from "../../assets/jss/material-kit-react/components/customTabsStyle.js";
 
 const useStyles = makeStyles(styles);
 const useStylesB = makeStyles((theme) => ({

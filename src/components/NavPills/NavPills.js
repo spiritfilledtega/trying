@@ -10,11 +10,13 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import GridContainer from "../Grid/GridContainer.js";
+// import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "../Grid/GridItem.js";
+// import GridItem from "components/Grid/GridItem.js";
 
-import styles from "assets/jss/material-kit-react/components/navPillsStyle.js";
-import { ColoredContext } from "views/Components/Sections/SectionPills";
+import styles from "../../assets/jss/material-kit-react/components/navPillsStyle.js";
+import { ColoredContext } from "../../views/Components/Sections/SectionPills";
 
 const useStyles = makeStyles(styles);
 

@@ -11,9 +11,9 @@ import SectionTabs from "./SectionTabs.js";
 // core components
 // import GridContainer from "components/Grid/GridContainer.js";
 // import GridItem from "components/Grid/GridItem.js";
-import NavPills from "components/NavPills/NavPills.js";
+import NavPills from "../../../components/NavPills/NavPills.js";
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+import styles from "../../../assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
 
 export const ColoredContext = React.createContext();
 
@@ -28,7 +28,7 @@ export default function SectionPills() {
         <div className={classes.container}>
           <div id="navigation-pills">
             <div className={classes.title}>
-              <h3>BUY, SELL OR BID?</h3>
+              <h3>BUY, SELL OR SEND?</h3>
             </div>
             <div className={classes.title}>
               <h3>{/* <small>With Icons</small> */}</h3>
@@ -56,7 +56,7 @@ export default function SectionPills() {
                   tabContent: <SectionTabs />,
                 },
                 {
-                  tabButton: "BID",
+                  tabButton: "SEND",
                   tabId: 3,
                   tabIcon: AssignmentIcon,
                   tabContent: <SectionTabs />,

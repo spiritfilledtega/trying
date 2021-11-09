@@ -1,9 +1,15 @@
 import React from "react";
-import Button from "components/CustomButtons/Button.js";
+// import Button from "components/CustomButtons/Button.js";
+
+import Button from "../../../components/CustomButtons/Button.js";
+
 import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import FileCopyOutlinedIcon from "@material-ui/icons/FileCopyOutlined";
-import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+// import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+
+import styles from "../../../assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
+
 import CopyToClipboard from "react-copy-to-clipboard";
 
 const useStyles = makeStyles(styles);

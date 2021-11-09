@@ -133,11 +133,11 @@ const roseCardHeader = {
   background: "linear-gradient(60deg, #ec407a, #d81b60)",
   ...roseBoxShadow,
 };
-const customCardHeader = {
-  color: "#424242",
-  background: "#eeeeee",
-  ...defaultBoxShadow,
-};
+// const customCardHeader = {
+//   color: "#424242",
+//   background: "#eeeeee",
+//   ...defaultBoxShadow,
+// };
 const cardActions = {
   margin: "0 20px 10px",
   paddingTop: "10px",
@@ -159,6 +159,12 @@ const defaultBoxShadow = {
     "0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)",
   padding: "10px 0",
   transition: "all 150ms ease 0s",
+};
+
+const customCardHeader = {
+  color: "#424242",
+  background: "#eeeeee",
+  ...defaultBoxShadow,
 };
 
 const title = {

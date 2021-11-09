@@ -187,7 +187,7 @@ const Peer = ({
 
   let buywhat =
     OrderKind === 1
-      ? "USDT"
+      ? "cow"
       : OrderKind === 2
       ? "BUSD"
       : OrderKind === 3
@@ -207,7 +207,7 @@ const Peer = ({
       ? "N/ETH"
       : "N/USEFUL";
 
-  let buyOrSell = state == 0 ? true : false;
+  let buyOrSell = state === 0 ? true : false;
 
   let handleWhatsapClicked = (event) => {
     setPopHeaderMessage("Copy the default message and use it in your chat");
